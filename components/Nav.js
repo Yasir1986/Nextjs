@@ -1,5 +1,6 @@
 import Link from "next/link";
 import navStyles from "../styles/Nav.module.css";
+import { getStaticProps } from "../pages/index";
 
 const Nav = () => {
   return (

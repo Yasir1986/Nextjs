@@ -1,8 +1,8 @@
-import Document from 'next/document'
+import Document from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const originalRenderPage = ctx.renderPage
+    const originalRenderPage = ctx.renderPage;
 
     ctx.renderPage = () =>
       originalRenderPage({
@@ -10,13 +10,13 @@ class MyDocument extends Document {
         enhanceApp: (App) => App,
         // useful for wrapping in a per-page basis
         enhanceComponent: (Component) => Component,
-      })
+      });
 
     // Run the parent `getInitialProps`, it now includes the custom `renderPage`
-    const initialProps = await Document.getInitialProps(ctx)
+    const initialProps = await Document.getInitialProps(ctx);
 
-    return initialProps
+    return initialProps;
   }
 }
 
-export default MyDocument
+export default MyDocument;

@@ -2,7 +2,7 @@ import { server } from "../config";
 import ArticleList from "../components/ArticleList";
 
 export default function Home({ articles }) {
-  console.log(articles);
+  //console.log(articles);
   return (
     <div>
       {/*  can be use if there is no head component */}
